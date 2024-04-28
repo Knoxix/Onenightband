@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Night Band - Alla möjliga genrer</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"> </script>
+    
+</head>
+<body>
+    <header>
+        <h1>One Night Band</h1>
+        <nav>
+            <ul>
+                <li><a href="#om-oss">Om oss</a></li>
+                <li><a href="#repertoar">Repertoar</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#kontakt">Kontakt</a></li>
+                <li><a href="#video">Videos</a></li>
+                <li><a href="#bilder">Bilder</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="om-oss">
+            <h2>Om oss</h2>
+            <iframe src="https://fb.watch/rJPkEM1-MF/" height="315" width="700">
+                
+            </iframe>
+            <p>Med liveband på festen blir det alltid en bättre fest när One Night Band spelar. Vi erbjuder en stor repertoar av musik från olika genrer och är bekväma på scenen. Vi involverar gärna både gäster och publik för en minnesvärd upplevelse.</p>
+            <p>One Night Band är baserat i Kristinehamn men spelar på olika fester runt om i städer som Örebro, Karlstad, Mariefred och Motala.</p>
+            <img src="https://scontent-arn2-1.xx.fbcdn.net/v/t39.30808-6/309396355_605872051107967_8457841451569775987_n.jpg?stp=dst-jpg_s960x960&_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_ohc=cMg2sbZmK00Ab5yQl85&_nc_ht=scontent-arn2-1.xx&oh=00_AfBiXoJ_sm1demP6j6f6a_85dvKSr903zwM95JngHrJY2A&oe=6633B08D" alt="Bild på bandet">
+        </section>
+
+        <section id="repertoar">
+            <h2>Repertoar</h2>
+            <div class="repertoar-content">
+                <ul class="repertoar-list">
+                    <li>Rock</li>
+                    <li>Pop</li>
+                    <li>Soul</li>
+                    <li>Funk</li>
+                    <li>Disco</li>
+                    <li>Country</li>
+                    <li>Vispop</li>
+                    <li>Jazz</li>
+                    <li>Klassisk</li>
+                </ul>
+                <p>Vi kan spela allt från de senaste hitsen till klassiker från förr. Vi tar också gärna emot önskemål från publiken.</p>
+            </div>
+        </section>
+
+        <section id="kontakt">
+            <h2>Kontakta oss</h2>
+            <form action="processa_kontakt.php" method="post">
+                <label for="namn">Namn:</label>
+                <input type="text" id="namn" name="namn" required><br>
+                <label for="email">E-post:</label>
+                <input type="email" id="email" name="email" required><br>
+                <label for="meddelande">Meddelande:</label>
+                <textarea id="meddelande" name="meddelande" rows="5" required></textarea><br>
+                <input type="submit" value="Skicka">
+            </form>
+        </section>
+
+        <section id="faq">
+            <h2>FAQ</h2>
+            <div class="faq-item">
+                <h3>Vilka typer av evenemang spelar ni på?</h3>
+                <p>One Night Band har erfarenhet av att framträda på en mängd olika evenemang, från bröllop till företagsevent och festivaler.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Hur lång tid spelar ni?</h3>
+                <p>En standardspelning är 3 timmar lång, men vi kan anpassa oss efter dina önskemål.</p>
+            </div>
+        </section>
+
+        <section id="video">
+            <h2>Video</h2>
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>  
+            </div>
+
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>  
+            </div>
+
+            
+    </main>
+</body>
+</html>
