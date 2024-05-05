@@ -1,91 +1,89 @@
 <!DOCTYPE html>
 <html lang="sv">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>One Night Band - Alla möjliga genrer</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"> </script>
-
-</head>
-<style>
-    body {
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+    <style>
+      body {
         background-color: #222;
         color: #eee;
         font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
-    }
+      }
 
-    header {
+      header {
         background-color: #333;
         padding: 10px 0;
         text-align: center;
-    }
+      }
 
-    header h1 {
-        color: #FF0000;
+      header h1 {
+        color: #ff0000;
         margin: 0;
-    }
+      }
 
-    nav ul {
+      nav ul {
         list-style-type: none;
         padding: 0;
         margin: 0;
         text-align: center;
-    }
+      }
 
-    nav ul li {
+      nav ul li {
         display: inline;
         margin-right: 20px;
-    }
+      }
 
-    nav ul li a {
-        color: #FF0000;
+      nav ul li a {
+        color: #ff0000;
         text-decoration: none;
         transition: color 0.3s ease;
-    }
+      }
 
-    nav ul li a:hover {
+      nav ul li a:hover {
         color: #ccc;
-    }
+      }
 
-    main {
+      main {
         padding: 20px;
         max-width: 800px;
         margin: 0 auto;
-    }
+      }
 
-    section {
+      section {
         margin-bottom: 40px;
         padding: 20px;
         background-color: #333;
         border-radius: 5px;
-    }
+      }
 
-    section h2 {
-        color: #FF0000;
+      section h2 {
+        color: #ff0000;
         margin-top: 0;
-    }
+      }
 
-    section p {
+      section p {
         line-height: 1.5;
-    }
+      }
 
-    section img {
+      section img {
         max-width: 100%;
         height: auto;
         border-radius: 5px;
-    }
+      }
 
-    form label {
+      form label {
         display: block;
         margin-bottom: 10px;
-        color: #FF0000;
-    }
+        color: #ff0000;
+      }
 
-    form input,
-    form textarea {
+      form input,
+      form textarea {
         width: 100%;
         padding: 10px;
         margin-bottom: 10px;
@@ -94,286 +92,227 @@
         color: #eee;
         border-radius: 5px;
         box-sizing: border-box; /* Fix för att inkludera padding i bredden */
-    }
+      }
 
-    form input[type="submit"] {
-        background-color: #FF0000;
+      form input[type="submit"] {
+        background-color: #ff0000;
         color: white;
         border: none;
         cursor: pointer;
         transition: background-color 0.3s ease;
-    }
+      }
 
-    form input[type="submit"]:hover {
+      form input[type="submit"]:hover {
         background-color: #cc0000;
-    }
+      }
 
-    #video {
+      #video {
         margin-bottom: 40px;
         padding: 20px;
         background-color: #333;
         border-radius: 5px;
-    }
+      }
 
-    #video h2 {
-        color: #FF0000;
+      #video h2 {
+        color: #ff0000;
         margin-top: 0;
-    }
+      }
 
-    .video-container {
+      .video-container {
         position: relative;
         overflow: hidden;
         padding-top: 56.25%; /* 16:9 aspect ratio */
-    }
+      }
 
-    .video-container iframe {
+      .video-container iframe {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
         border: none;
-    }
-    .mySlides {
+      }
+
+      .slideshow-container {
+        position: relative;
+        max-width: 800px;
+        margin: auto;
+      }
+
+      .slide {
         display: none;
-    }
+      }
 
-    .fade {
-        animation-name: fade;
-        animation-duration: 1.5s;
-    }
+      .slide img {
+        width: 100%;
+        height: auto;
+      }
 
-    @keyframes fade {
-        from {opacity: .4}
-        to {opacity: 1}
-    }
-
-    /* Position the next and previous buttons */
-    .prev, .next {
-        cursor: pointer;
+      .prev,
+      .next {
         position: absolute;
         top: 50%;
-        width: auto;
-        margin-top: -22px;
-        padding: 16px;
-        color: white;
-        font-weight: bold;
-        font-size: 18px;
-        transition: 0.6s ease;
-        border-radius: 0 3px 3px 0;
-    }
-
-    /* Position the next button */
-    .next {
-        right: 0;
-        border-radius: 3px 0 0 3px;
-    }
-
-    /* On hover, add a black background color */
-    .prev:hover, .next:hover {
-        background-color: rgba(0, 0, 0, 0.8);
-    }
-
-    /* Caption text */
-    .text {
-        color: #f2f2f2;
-        font-size: 15px;
-        padding: 8px 12px;
-        position: absolute;
-        bottom: 8px;
-        width: 100%;
-        text-align: center;
-    }
-
-    /* The dots/bullets/indicators */
-    .dot {
+        transform: translateY(-50%);
+        background-color: rgba(255, 255, 255, 0.5);
+        border: none;
+        padding: 10px;
         cursor: pointer;
-        height: 15px;
-        width: 15px;
-        margin: 0 2px;
-        background-color: #bbb;
-        border-radius: 50%;
-        display: inline-block;
-        transition: background-color 0.6s ease;
-    }
+        z-index: 1;
+        color: red;
+      }
 
-    .active, .dot:hover {
-        background-color: #717171;
-    }
-    #faq {
-        padding: 20px;
-        background-color: #222;
-        border-radius: 10px;
-    }
+      .prev {
+        left: 0;
+      }
 
-    .faq-item {
-        margin-bottom: 20px;
-    }
+      .next {
+        right: 0;
+      }
+    </style>
+  </head>
 
-    .faq-item h3 {
-        color: #FF0000;
-    }
-
-    .faq-item p {
-        color: white;
-        line-height: 1.5;
-    }
-    #repertoar {
-        padding: 20px;
-        background-color: #222;
-        border-radius: 10px;
-    }
-
-    .repertoar-content {
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start; /* Justera vertikalt till början av sektionen */
-    }
-
-    .repertoar-list {
-        list-style-type: none;
-        padding: 0;
-        margin-right: 20px; /* Lite utrymme mellan listan och beskrivande texten */
-    }
-
-    .repertoar-list li {
-        color: #FF0000;
-        margin-bottom: 5px;
-    }
-
-    .repertoar-list li:before {
-        content: "\2022"; /* Bullet point */
-        color: #FF0000;
-        display: inline-block;
-        width: 1em;
-        margin-left: -1em;
-    }
-
-    #repertoar p {
-        color: white;
-        line-height: 1.5;
-    }
-
-    /* Media query för mobilanpassning */
-    @media (max-width: 768px) {
-        .repertoar-content {
-            flex-direction: column; /* Ställer om till staplad layout på mindre skärmar */
-        }
-
-        .repertoar-list {
-            margin-right: 0; /* Ta bort mellanrummet på mindre skärmar */
-            margin-bottom: 20px; /* Lägg till lite utrymme mellan listan och beskrivande texten */
-        }
-    }</style>
-<body>
+  <body>
     <header>
-        <h1>One Night Band</h1>
-        <nav>
-            <ul>
-                <li><a href="#om-oss">Om oss</a></li>
-                <li><a href="#repertoar">Repertoar</a></li>
-                <li><a href="#faq">FAQ</a></li>
-                <li><a href="#kontakt">Kontakt</a></li>
-                <li><a href="#video">Videos</a></li>
-                <li><a href="#bilder">Bilder</a></li>
-            </ul>
-        </nav>
+      <h1>One Night Band</h1>
+      <nav>
+        <ul>
+          <li><a href="#om-oss">Om oss</a></li>
+          <li><a href="#repertoar">Repertoar</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+          <li><a href="#video">Videos</a></li>
+          <li><a href="#bilder">Bilder</a></li>
+        </ul>
+      </nav>
     </header>
 
     <main>
-        <section id="om-oss">
-            <h2>Om oss</h2>
-            <p>Med liveband på festen blir det alltid en bättre fest när One Night Band spelar. Vi erbjuder en stor repertoar av musik från olika genrer och är bekväma på scenen. Vi involverar gärna både gäster och publik för en minnesvärd upplevelse.</p>
-            <p>One Night Band är baserat i Kristinehamn men spelar på olika fester runt om i sverige.</p>
-            <p><strong> Kristinehamn, Örebro, Karlstad, Mariefred och Motala är exempel på städer som vi åker till. Hör av dig om du är intresserad av att låta oss göra er fest till den bästa festen.
+      <section id="om-oss">
+        <h2>Om oss</h2>
+        <p>
+          Med liveband på festen blir det alltid en bättre fest när One Night
+          Band spelar. Vi erbjuder en stor repertoar av musik från olika genrer
+          och är bekväma på scenen. Vi involverar gärna både gäster och publik
+          för en minnesvärd upplevelse.
+        </p>
+        <p>
+          One Night Band är baserat i Kristinehamn men spelar på olika fester
+          runt om i Sverige.
+        </p>
+        <p>
+          <strong
+            >Kristinehamn, Örebro, Karlstad, Mariefred och Motala är exempel på
+            städer som vi åker till. Hör av dig om du är intresserad av att låta
+            oss göra er fest till den bästa festen.</strong
+          >
+        </p>
+        <img
+          src="https://scontent-arn2-1.xx.fbcdn.net/v/t39.30808-6/309396355_605872051107967_8457841451569775987_n.jpg?stp=dst-jpg_s960x960&_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_ohc=cMg2sbZmK00Ab5yQl85&_nc_ht=scontent-arn2-1.xx&oh=00_AfBiXoJ_sm1demP6j6f6a_85dvKSr903zwM95JngHrJY2A&oe=6633B08D"
+          alt="Bild på bandet"
+        />
+      </section>
 
-</strong></p>
-            <img src="https://scontent-arn2-1.xx.fbcdn.net/v/t39.30808-6/309396355_605872051107967_8457841451569775987_n.jpg?stp=dst-jpg_s960x960&_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_ohc=cMg2sbZmK00Ab5yQl85&_nc_ht=scontent-arn2-1.xx&oh=00_AfBiXoJ_sm1demP6j6f6a_85dvKSr903zwM95JngHrJY2A&oe=6633B08D" alt="Bild på bandet">
-        </section>
+      <section id="repertoar">
+        <h2>Repertoar</h2>
+        <div class="repertoar-content">
+          <ul class="repertoar-list">
+            <li>Rock</li>
+            <li>Pop</li>
+            <li>Funk</li>
+            <li>Disco</li>
+            <li>Country</li>
+            <li>Allsång</li>
+          </ul>
+          <p>
+            Vi kan spela allt från de senaste hitsen till klassiker från förr.
+            Vi tar också gärna emot önskemål från publiken.
+          </p>
+        </div>
+      </section>
 
-        <section id="repertoar">
-            <h2>Repertoar</h2>
-            <div class="repertoar-content">
-                <ul class="repertoar-list">
-                    <li>Rock</li>
-                    <li>Pop</li>
-                    <li>Funk</li>
-                    <li>Disco</li>
-                    <li>Country</li>
-                    <li>Allsång</li>
+      <section id="kontakt">
+        <h2>Kontakt</h2>
+        <form action="kontakt.php" method="post">
+          <label for="name">Namn:</label>
+          <input type="text" id="name" name="name" required />
 
-                </ul>
-                <p>Vi kan spela allt från de senaste hitsen till klassiker från förr. Vi tar också gärna emot önskemål från publiken.</p>
-            </div>
-        </section>
+          <label for="email">E-post:</label>
+          <input type="email" id="email" name="email" required />
 
-        <section id="kontakt">
-            <h2>Kontakta oss</h2>
-            <form action="https://api.web3forms.com/submit" method="post">
-                <input type="hidden" name="access_key" value="cef18e3d-60d4-4f30-bd19-5e00297395cf">
-                <label for="namn">Namn:</label>
-                <input type="text" id="namn" name="namn" required><br>
-                <label for="email">E-post:</label>
-                <input type="email" id="email" name="email" required><br>
-                <label for="meddelande">Meddelande:</label>
-                <textarea id="meddelande" name="meddelande" rows="5" required></textarea><br>
-                <input type="submit" value="Skicka">
-            </form>
-            <p>beroende på omständigheter och program. Ge en tydlig beskrivning på eventet, så blir det lättare för artisten att ge en passande offert.</p>
-            <a href="https://www.facebook.com/OneNightJocke/photos_albums" target="_blank">
-  <img src="data:image/png;base64,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" alt="Facebook" width="40" height="40">
-</a>
-        </section>
+          <label for="message">Meddelande:</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
 
-        <section id="faq">
-            <h2>FAQ</h2>
-            <div class="faq-item">
-                <h3>Vilka typer av evenemang spelar ni på?</h3>
-                <p>One Night Band har erfarenhet av att framträda på en mängd olika evenemang, från bröllop till företagsevent och festivaler.</p>
-            </div>
-            <div class="faq-item">
-                <h3>Hur lång tid spelar ni?</h3>
-                <p>En standardspelning är 3 timmar lång, men vi kan anpassa oss efter dina önskemål.</p>
-            </div>
-        </section>
+          <input type="submit" value="Skicka" />
+        </form>
+      </section>
 
-        <section id="video">
-            <h2>Video</h2>
+      <section id="video">
+        <h2>Videos</h2>
+        <div class="video-container">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/QbK02XcDU7A"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </section>
 
-            <div class="video-container">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/foQ-bTPueZ4?si=sXCQJLk72YDbTrF5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-
-            <div class="video-container">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/hhQjHbm-l5I?si=Yg8yDCml6g_lpt_5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-
-            <section id="bilder">
-                <h2>Bilder</h2>
-                <div class="bilder">
-                    <img src="onenight1.jpg"
-
-                </div>
-                <div class="bilder">
-                    <img src="onenight2.jpg"
-
-                </div>
-                <div class="bilder">
-                    <img src="onenight3.jpg"
-
-                </div>
-                <div class="bilder">
-                    <img src="onnight4.jpg"
-
-                </div>
-                <div class="bilder">
-                    <img src="onenight5.jpg"
-
-                </div>
-                <div class="bilder">
-                    <img src="onenight 6.jpg"
-
-                </div>
-
+      <section id="bilder">
+        <h2>Bilder</h2>
+        <div class="slideshow-container">
+          <div class="slide">
+            <img src="onenight1.jpg" alt="Bild 1" />
+          </div>
+          <div class="slide">
+            <img src="onenight2.jpg" alt="Bild 2" />
+          </div>
+          <div class="slide">
+            <img src="onenight3.jpg" alt="Bild 3" />
+          </div>
+          <div class="slide">
+            <img src="onnight4.jpg" alt="Bild 4" />
+          </div>
+          <div class="slide">
+            <img src="onenight5.jpg" alt="Bild 5" />
+          </div>
+          <div class="slide">
+            <img src="onenight 6.jpg" alt="Bild 6" />
+          </div>
+          <button class="prev" onclick="changeSlide(-1)">Föregående</button>
+          <button class="next" onclick="changeSlide(1)">Nästa</button>
+        </div>
+      </section>
     </main>
-</body>
+
+    <footer>
+      <p>&copy; 2024 One Night Band. Alla rättigheter förbehållna.</p>
+    </footer>
+
+    <script>
+      let slideIndex = 0;
+      showSlide(slideIndex);
+
+      function changeSlide(n) {
+        showSlide((slideIndex += n));
+      }
+
+      function showSlide(n) {
+        const slides = document.getElementsByClassName("slide");
+        if (n >= slides.length) {
+          slideIndex = 0;
+        }
+        if (n < 0) {
+          slideIndex = slides.length - 1;
+        }
+        for (let i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slides[slideIndex].style.display = "block";
+      }
+    </script>
+  </body>
+</html>
