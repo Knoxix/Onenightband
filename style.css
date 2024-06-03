@@ -162,13 +162,13 @@ form input[type="submit"]:hover {
 }
 
 .bottom-pic1 {
-  width: 20%;
+  width: 50%;
   height: auto;
   text-align: center;
 }
 
 .bottom-pic2 {
-  width: 6.8%;
-  height: 6.8%;
+  width: 50%;
+  height: auto;
   text-align: center;
 }
