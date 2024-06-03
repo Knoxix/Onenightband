@@ -161,7 +161,7 @@ form input[type="submit"]:hover {
 }
 
 .bottom-pic1 {
-  margin-left: 22cm;
+  display: center;
   width: 20%;
   height: auto;
 }
