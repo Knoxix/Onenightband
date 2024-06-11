@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>One Night Band - Alla möjliga genrer</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <h1>One Night Band</h1>
+      <nav>
+        <ul>
+          <li><a href="#om-oss">Om oss</a></li>
+          <li><a href="#repertoar">Repertoar</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+          <li><a href="#video">Videos</a></li>
+          <li><a href="#bilder">Bilder</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="om-oss">
+        <h2>Om oss</h2>
+        <p>
+          Med liveband på festen blir det alltid en bättre fest när One Night
+          Band spelar. Vi erbjuder en stor repertoar av musik från olika genrer
+          och är bekväma på scenen. Vi involverar gärna både gäster och publik
+          för en minnesvärd upplevelse.
+        </p>
+        <p>
+          One Night Band är baserat i Kristinehamn men spelar på olika fester
+          runt om i Sverige.
+        </p>
+        <p>
+          <strong
+            >Kristinehamn, Örebro, Karlstad, Mariefred och Motala är exempel på
+            städer som vi åker till. Hör av dig om du är intresserad av att låta
+            oss göra er fest till den bästa festen.</strong
+          >
+        </p>
+        <img
+          src="https://scontent-arn2-1.xx.fbcdn.net/v/t39.30808-6/309396355_605872051107967_8457841451569775987_n.jpg?stp=dst-jpg_s960x960&_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_ohc=cMg2sbZmK00Ab5yQl85&_nc_ht=scontent-arn2-1.xx&oh=00_AfBiXoJ_sm1demP6j6f6a_85dvKSr903zwM95JngHrJY2A&oe=6633B08D"
+          alt="Bild på bandet"
+        />
+      </section>
+
+      <section id="repertoar">
+        <h2>Repertoar</h2>
+        <div class="repertoar-content">
+          <ul class="repertoar-list">
+            <li>Rock</li>
+            <li>Pop</li>
+            <li>Funk</li>
+            <li>Disco</li>
+            <li>Country</li>
+            <li>Allsång</li>
+          </ul>
+          <p>
+            Vi kan spela allt från de senaste hitsen till klassiker från förr.
+            Vi tar också gärna emot önskemål från publiken.
+          </p>
+        </div>
+      </section>
+
+      <section id="kontakt">
+        <h2>Kontakt</h2>
+        <form action="kontakt.php" method="post">
+          <label for="name">Namn:</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">E-post:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="message">Meddelande:</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+
+          <input type="submit" value="Skicka" />
+        </form>
+      </section>
+
+      <section id="video">
+        <h2>Videos</h2>
+        <div class="video-container">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/foQ-bTPueZ4?si=14JthihCK5YP3hsg"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </section>
+
+      <section id="bilder">
+        <h2>Bilder</h2>
+        <div class="slideshow-container">
+          <div class="slide">
+            <img src="onenight1.jpg" alt="Bild 1" />
+          </div>
+          <div class="slide">
+            <img src="onenight2.jpg" alt="Bild 2" />
+          </div>
+          <div class="slide">
+            <img src="onenight3.jpg" alt="Bild 3" />
+          </div>
+          <div class="slide">
+            <img src="onnight4.jpg" alt="Bild 4" />
+          </div>
+          <div class="slide">
+            <img src="onenight5.jpg" alt="Bild 5" />
+          </div>
+          <div class="slide">
+            <img src="onenight6.jpg" alt="Bild 6" />
+          </div>
+          <button class="prev" onclick="changeSlide(-1)">Föregående</button>
+          <button class="next" onclick="changeSlide(1)">Nästa</button>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 One Night Band. Alla rättigheter förbehållna.</p>
+    </footer>
+    <div class="pictures">
+      <h1>Samarbete med</h1>
+      <img
+        src="Messenger_creation_71b5ff99-624d-41a4-8dd4-e776d9fd817f.jpeg"
+        class="bottom-pic1"
+      />
+      <img
+        src="Messenger_creation_7adb74f3-9798-4ce7-ab7b-bcafd3269975.jpeg"
+        class="bottom-pic2"
+      />
+    </div>
+  </body>
+</html>
