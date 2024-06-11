@@ -43,8 +43,9 @@ nav ul li a:hover {
 
 main {
   padding: 20px;
-  max-width: 800px;
+  max-width: 100%;
   margin: 0 auto;
+  box-sizing: border-box; /* Include padding in width calculations */
 }
 
 section {
@@ -84,7 +85,7 @@ form textarea {
   background-color: #444;
   color: #eee;
   border-radius: 5px;
-  box-sizing: border-box; /* Fix för att inkludera padding i bredden */
+  box-sizing: border-box; /* Include padding in width calculations */
 }
 
 form input[type="submit"] {
@@ -128,7 +129,7 @@ form input[type="submit"]:hover {
 
 .slideshow-container {
   position: relative;
-  max-width: 800px;
+  max-width: 100%;
   margin: auto;
 }
 
@@ -175,6 +176,7 @@ form input[type="submit"]:hover {
   font-style: italic;
   font-family: sans-serif;
 }
+
 /*  
 .bottom-pic1 {
   width: 500px;
@@ -188,3 +190,27 @@ form input[type="submit"]:hover {
   text-align: center;
 }
 */
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  nav ul li {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .pictures {
+    position: static;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: 0;
+  }
+
+  .pictures img {
+    width: 100px;
+    height: auto;
+  }
+}
+
+
